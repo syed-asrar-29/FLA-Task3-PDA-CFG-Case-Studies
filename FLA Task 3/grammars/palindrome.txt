@@ -1,0 +1,17 @@
+# Context-Free Grammar for Palindrome Recognition over {a, b}
+# Alphabet: Σ = { 'a', 'b' }
+# Non-terminals: { S }
+# Start variable: S
+#
+# Production rules:
+# S -> aSa  (recursive step with 'a' at both boundaries)
+# S -> bSb  (recursive step with 'b' at both boundaries)
+# S -> a    (odd-length palindrome center 'a')
+# S -> b    (odd-length palindrome center 'b')
+# S -> ε    (even-length palindrome center - empty string)
+
+S -> aSa
+S -> bSb
+S -> a
+S -> b
+S -> ε

@@ -1,0 +1,21 @@
+# Context-Free Grammar for Arithmetic Expression Validation
+# Terminals: { id, num, +, -, *, /, (, ) }
+# Non-terminals: { E, T, F }
+# Start variable: E
+#
+# Precedence hierarchy:
+# E handles addition and subtraction (+, -)
+# T handles multiplication and division (*, /)
+# F handles atomic factors: parenthesized expressions (E), identifiers (id), and numeric literals (num)
+
+E -> E + T
+E -> E - T
+E -> T
+
+T -> T * F
+T -> T / F
+T -> F
+
+F -> ( E )
+F -> id
+F -> num

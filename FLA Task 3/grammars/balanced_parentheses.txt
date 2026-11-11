@@ -1,0 +1,7 @@
+# Context-Free Grammar for Balanced Parentheses
+# Alphabet: Σ = { '(', ')' }
+# Non-terminals: { S }
+# Start variable: S
+
+S -> (S)S
+S -> ε
